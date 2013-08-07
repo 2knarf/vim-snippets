@@ -83,9 +83,9 @@ snippet warning
 #
 # Types
 snippet cron
-	cron{ "${1:name}":
-		command	=> "${2}",
-		user	=> "${3:root}",
+	cron{ '${1:name}':
+		command	=> '${2}',
+		user	=> '${3:root}',
 		${4}	=> ${5}
 	}
 
@@ -120,9 +120,9 @@ snippet mailalias
 	}
 
 snippet mount
-	mount{ "${1:destination path}":
+	mount{ '${1:destination path}':
 		ensure	=> ${2:mounted},
-		device	=> "${3:device name or path}"
+		device	=> '${3:device name or path}'
 	}
 
 snippet package
@@ -142,14 +142,14 @@ snippet define
 	}
 
 snippet service
-	service{ "${1:service}":
+	service{ '${1:service}':
 		enable		=> ${2:true},
 		ensure		=> ${3:running},
 		hasstatus	=> true,
 	}
 
 snippet file
-	file{ "${1:path}":
+	file{ '${1:path}':
 		${2}	=> ${3}
 	}
 
